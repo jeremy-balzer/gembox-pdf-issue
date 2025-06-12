@@ -1,0 +1,981 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>GemBox.Pdf.Ocr</name>
+  </assembly>
+  <members>
+    <member name="T:GemBox.Pdf.Ocr.OcrException">
+      <summary>
+            Represents errors that can occur when performing optical character recognition.
+            </summary>
+    </member>
+    <member name="T:GemBox.Pdf.Ocr.OcrLanguages">
+      <summary>
+            Defines all languages and scripts which can be used for optical character recognition.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Afrikaans">
+      <summary>
+            Afrikaans language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Amharic">
+      <summary>
+            Amharic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Arabic">
+      <summary>
+            Arabic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Assamese">
+      <summary>
+            Assamese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Azerbaijani">
+      <summary>
+            Azerbaijani language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.AzerbaijaniCyrilic">
+      <summary>
+            Azerbaijani - Cyrilic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Belarusian">
+      <summary>
+            Belarusian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Bengali">
+      <summary>
+            Bengali language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tibetan">
+      <summary>
+            Tibetan language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Bosnian">
+      <summary>
+            Bosnian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Breton">
+      <summary>
+            Breton language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Bulgarian">
+      <summary>
+            Bulgarian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Catalan">
+      <summary>
+            Catalan; Valencian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Cebuano">
+      <summary>
+            Cebuano language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Czech">
+      <summary>
+            Czech language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ChineseSimplified">
+      <summary>
+            Chinese - Simplified language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ChineseTraditional">
+      <summary>
+            Chinese - Traditional language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Cherokee">
+      <summary>
+            Cherokee language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Corsican">
+      <summary>
+            Corsican language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Welsh">
+      <summary>
+            Welsh language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Danish">
+      <summary>
+            Danish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.German">
+      <summary>
+            German language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Dzongkha">
+      <summary>
+            Dzongkha language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Greek">
+      <summary>
+            Greek, Modern (1453-) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.English">
+      <summary>
+            English language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.MiddleEnglish">
+      <summary>
+            English, Middle (1100-1500) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Esperanto">
+      <summary>
+            Esperanto language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Math">
+      <summary>
+            Math / equation detection module language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Estonian">
+      <summary>
+            Estonian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Basque">
+      <summary>
+            Basque language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Faroese">
+      <summary>
+            Faroese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Persian">
+      <summary>
+            Persian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.FilipinoTagalog">
+      <summary>
+            Filipino (old - Tagalog) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Finnish">
+      <summary>
+            Finnish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.French">
+      <summary>
+            French language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GermanFraktur">
+      <summary>
+            German - Fraktur language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.MiddleFrench">
+      <summary>
+            French, Middle (ca.1400-1600) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.WesternFrisian">
+      <summary>
+            Western Frisian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ScottishGaelic">
+      <summary>
+            Scottish Gaelic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Irish">
+      <summary>
+            Irish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Galician">
+      <summary>
+            Galician language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GreekAncient">
+      <summary>
+            Greek, Ancient (to 1453) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Gujarati">
+      <summary>
+            Gujarati language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Haitian">
+      <summary>
+            Haitian; Haitian Creole language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Hebrew">
+      <summary>
+            Hebrew language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Hindi">
+      <summary>
+            Hindi language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Croatian">
+      <summary>
+            Croatian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Hungarian">
+      <summary>
+            Hungarian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Armenian">
+      <summary>
+            Armenian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Inuktitut">
+      <summary>
+            Inuktitut language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Indonesian">
+      <summary>
+            Indonesian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Icelandic">
+      <summary>
+            Icelandic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Italian">
+      <summary>
+            Italian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ItalianOld">
+      <summary>
+            Italian - Old language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Javanese">
+      <summary>
+            Javanese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Japanese">
+      <summary>
+            Japanese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Kannada">
+      <summary>
+            Kannada language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Georgian">
+      <summary>
+            Georgian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GeorgianOld">
+      <summary>
+            Georgian - Old language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Kazakh">
+      <summary>
+            Kazakh language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.CentralKhmer">
+      <summary>
+            Central Khmer language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Kirghiz">
+      <summary>
+            Kirghiz; Kyrgyz language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Kurmanji">
+      <summary>
+            Kurmanji (Kurdish - Latin Script) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Korean">
+      <summary>
+            Korean language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.KoreanVertical">
+      <summary>
+            Korean (vertical) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Lao">
+      <summary>
+            Lao language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Latin">
+      <summary>
+            Latin language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Latvian">
+      <summary>
+            Latvian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Lithuanian">
+      <summary>
+            Lithuanian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Luxembourgish">
+      <summary>
+            Luxembourgish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Malayalam">
+      <summary>
+            Malayalam language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Marathi">
+      <summary>
+            Marathi language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Macedonian">
+      <summary>
+            Macedonian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Maltese">
+      <summary>
+            Maltese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Mongolian">
+      <summary>
+            Mongolian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Maori">
+      <summary>
+            Maori language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Malay">
+      <summary>
+            Malay language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Burmese">
+      <summary>
+            Burmese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Nepali">
+      <summary>
+            Nepali language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Dutch">
+      <summary>
+            Dutch; Flemish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Norwegian">
+      <summary>
+            Norwegian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Occitan">
+      <summary>
+            Occitan (post 1500) language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Oriya">
+      <summary>
+            Oriya language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Punjabi">
+      <summary>
+            Panjabi; Punjabi language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Polish">
+      <summary>
+            Polish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Portuguese">
+      <summary>
+            Portuguese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Pashto">
+      <summary>
+            Pushto; Pashto language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Quechua">
+      <summary>
+            Quechua language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Romanian">
+      <summary>
+            Romanian; Moldavian; Moldovan language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Russian">
+      <summary>
+            Russian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Sanskrit">
+      <summary>
+            Sanskrit language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Sinhala">
+      <summary>
+            Sinhala; Sinhalese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Slovak">
+      <summary>
+            Slovak language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Slovenian">
+      <summary>
+            Slovenian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Sindhi">
+      <summary>
+            Sindhi language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Spanish">
+      <summary>
+            Spanish; Castilian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.SpanishOld">
+      <summary>
+            Spanish; Castilian - Old language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Albanian">
+      <summary>
+            Albanian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Serbian">
+      <summary>
+            Serbian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.SerbianLatin">
+      <summary>
+            Serbian - Latin language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Sundanese">
+      <summary>
+            Sundanese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Swahili">
+      <summary>
+            Swahili language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Swedish">
+      <summary>
+            Swedish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Syriac">
+      <summary>
+            Syriac language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tamil">
+      <summary>
+            Tamil language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tatar">
+      <summary>
+            Tatar language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Telugu">
+      <summary>
+            Telugu language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tajik">
+      <summary>
+            Tajik language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Thai">
+      <summary>
+            Thai language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tigrinya">
+      <summary>
+            Tigrinya language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Tonga">
+      <summary>
+            Tonga language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Turkish">
+      <summary>
+            Turkish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Uighur">
+      <summary>
+            Uighur; Uyghur language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Ukrainian">
+      <summary>
+            Ukrainian language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Urdu">
+      <summary>
+            Urdu language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Uzbek">
+      <summary>
+            Uzbek language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.UzbekCyrilic">
+      <summary>
+            Uzbek - Cyrilic language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Vietnamese">
+      <summary>
+            Vietnamese language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Yiddish">
+      <summary>
+            Yiddish language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.Yoruba">
+      <summary>
+            Yoruba language.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ArabicScript">
+      <summary>
+            Arabic script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ArmenianScript">
+      <summary>
+            Armenian script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.BengaliScript">
+      <summary>
+            Bengali script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.CanadianAboriginalScript">
+      <summary>
+            Canadian Aboriginal script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.CherokeeScript">
+      <summary>
+            Cherokee script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.CyrillicScript">
+      <summary>
+            Cyrillic script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.DevanagariScript">
+      <summary>
+            Devanagari script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.EthiopicScript">
+      <summary>
+            Ethiopic script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.FrakturScript">
+      <summary>
+            Fraktur script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GeorgianScript">
+      <summary>
+            Georgian script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GreekScript">
+      <summary>
+            Greek script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GujaratiScript">
+      <summary>
+            Gujarati script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.GurmukhiScript">
+      <summary>
+            Gurmukhi script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HanSimplifiedScript">
+      <summary>
+            Han simplified script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HanSimplifiedVerticalScript">
+      <summary>
+            Han simplified vertical script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HanTraditionalScript">
+      <summary>
+            Han traditional script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HanTraditionalVerticalScript">
+      <summary>
+            Han traditional vertical script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HangulScript">
+      <summary>
+            Hangul script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HangulVerticalScript">
+      <summary>
+            Hangul vertical script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.HebrewScript">
+      <summary>
+            Hebrew script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.JapaneseScript">
+      <summary>
+            Japanese script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.JapaneseVerticalScript">
+      <summary>
+            Japanese vertical script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.KannadaScript">
+      <summary>
+            Kannada script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.KhmerScript">
+      <summary>
+            Khmer script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.LaoScript">
+      <summary>
+            Lao script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.LatinScript">
+      <summary>
+            Latin script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.MalayalamScript">
+      <summary>
+            Malayalam script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.MyanmarScript">
+      <summary>
+            Myanmar script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.OdiaScript">
+      <summary>
+            Oriya(Odia) script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.SinhalaScript">
+      <summary>
+            Sinhala script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.SyriacScript">
+      <summary>
+            Syriac script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.TamilScript">
+      <summary>
+            Tamil script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.TeluguScript">
+      <summary>
+            Telugu script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ThaanaScript">
+      <summary>
+            Thaana script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.ThaiScript">
+      <summary>
+            Thai script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.TibetanScript">
+      <summary>
+            Tibetan script.
+            </summary>
+    </member>
+    <member name="F:GemBox.Pdf.Ocr.OcrLanguages.VietnameseScript">
+      <summary>
+            Vietnamese script.
+            </summary>
+    </member>
+    <member name="T:GemBox.Pdf.Ocr.OcrReader">
+      <summary>
+            Represents a class that performs optical character recognition.
+            </summary>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(System.String)">
+      <summary>
+            Performs optical character recognition on a file with the specified path, the path can point to a PDF or an image file.
+            </summary>
+      <param name="path">The file path to a PDF or an image.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="path" /> is <see langword="null" />.</exception>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(System.String,GemBox.Pdf.Ocr.OcrReadOptions)">
+      <summary>
+            Performs optical character recognition on a file with the specified path, the path can point to a PDF or an image file.
+            </summary>
+      <param name="path">The file path to a PDF or an image.</param>
+      <param name="readOptions">The reading options which can be used to define settings for OCR.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="path" /> is <see langword="null" />.</exception>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(System.IO.Stream)">
+      <summary>
+            Performs optical character recognition on a file in the stream, the stream can be from a PDF or an image file.
+            </summary>
+      <param name="stream">The file stream from a PDF or an image.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="stream" /> is <see langword="null" />.</exception>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(System.IO.Stream,GemBox.Pdf.Ocr.OcrReadOptions)">
+      <summary>
+            Performs optical character recognition on a file in the stream, the stream can be from a PDF or an image file.
+            </summary>
+      <param name="stream">The file stream from a PDF or an image.</param>
+      <param name="readOptions">The reading options which can be used to define settings for OCR.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="stream" /> is <see langword="null" />.</exception>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(GemBox.Pdf.PdfDocument)">
+      <summary>
+            Performs optical character recognition on a PDF document.
+            </summary>
+      <param name="document">The stream with an image.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <remarks>
+            This method creates a new <see cref="T:GemBox.Pdf.PdfDocument" /> and doesn't modify the original document.
+            </remarks>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReader.Read(GemBox.Pdf.PdfDocument,GemBox.Pdf.Ocr.OcrReadOptions)">
+      <summary>
+            Performs optical character recognition on a PDF document.
+            </summary>
+      <param name="document">The stream with an image.</param>
+      <param name="readOptions">The reading options which can be used to define settings for OCR.</param>
+      <returns>
+        <see cref="T:GemBox.Pdf.PdfDocument" /> with the recognized text.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="document" /> is <see langword="null" />.</exception>
+      <remarks>
+            This method creates a new <see cref="T:GemBox.Pdf.PdfDocument" /> and doesn't modify the original document.
+            </remarks>
+    </member>
+    <member name="T:GemBox.Pdf.Ocr.OcrReadOptions">
+      <summary>
+            Represents options for performing optical character recognition.
+            </summary>
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.Languages">
+      <summary>
+        <para>Gets or sets the languages which should be used to recognize text.</para>
+      </summary>
+      <value>
+            The languages which should be used to recognize text.
+            </value>
+      <remarks>
+            The values of this property need to match a data files in <see cref="P:GemBox.Pdf.Ocr.OcrReadOptions.TesseractDataPath" />.
+            If the list is empty, English is used as a default language.
+            </remarks>
+      <seealso href="https://www.gemboxsoftware.com/pdf/docs/ocr.html#language-data" />
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.LibraryPath">
+      <summary>
+            Gets or sets the path to the directory that contains tesseract and leptonica libraries.
+            </summary>
+      <value>
+            The path to the directory which contains tesseract and leptonica libraries.
+            </value>
+      <remarks>
+        <p>If this property is not set, these locations are searched:</p>
+        <ul>
+          <li>Assembly.GetExecutingAssembly().Location</li>
+          <li>AppDomain.CurrentDomain.BaseDirectory</li>
+          <li>Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin")</li>
+          <li>Environment.CurrentDirectory</li>
+        </ul>
+        <p>The path should point to the directory that contains x64 and x86 folders and not inside the x64 or x86 folder itself.</p>
+      </remarks>
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.TesseractDataPath">
+      <summary>
+            Gets or sets the path to the directory which contains tesseract data.
+            </summary>
+      <value>
+            The path to the directory which contains tesseract data.
+            </value>
+      <remarks>
+            By default this property points to the folder created by GemBox which contains data for English language.
+            You can download the data for other languages at https://www.gemboxsoftware.com/pdf/docs/ocr.html#language-data
+            </remarks>
+      <seealso href="https://www.gemboxsoftware.com/pdf/docs/ocr.html#language-data" />
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.PageSize">
+      <summary>
+        <para>Gets or sets the size of the page to which the content will be loaded.</para>
+        <para>If the value is <see langword="null" />, the size of the page will be determined from the image.</para>
+        <para>The default value is <see langword="null" />.</para>
+      </summary>
+      <value>
+            The size of the page to which the content will be loaded.
+            </value>
+      <remarks>
+            This property is valid only when reading from an image.
+            </remarks>
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.TextFormatter">
+      <summary>
+        <para>Gets or sets the action which should be performed on the recognized text.</para>
+      </summary>
+      <value>
+            The action which should be performed on the recognized text.
+            </value>
+      <remarks>
+        <para>This property can be used to change the formatting (font family or color) of the recognized text.</para>
+        <para>By default, the <strong>Calibri</strong> font is used and the font size is automatically determined from the recognized text.</para>
+      </remarks>
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.KeepImage">
+      <summary>
+            Gets or sets a value indicating whether the text should be loaded on top of the image.
+            </summary>
+      <value>
+        <see langword="true" /> if the text should be loaded on top of the image, <see langword="false" /> otherwise.
+            </value>
+      <remarks>
+        <para>If the value is <see langword="true" />, the image will be visible in the resulting document,
+            and the transparent (unless overridden by <see cref="P:GemBox.Pdf.Ocr.OcrReadOptions.TextFormatter" />) text will be written on top of it.</para>
+        <para>This is useful for creating documents from which the text can be copied while still visually preserving
+            the non-text parts of the image and the texts that couldn't be recognized.</para>
+        <para>The default value is <see langword="false" />.</para>
+      </remarks>
+    </member>
+    <member name="P:GemBox.Pdf.Ocr.OcrReadOptions.KeepContent">
+      <summary>
+            Gets or sets a value indicating whether the content of the original document should be preserved.
+            </summary>
+      <value>
+        <see langword="true" /> if the content of the original document should be preserved, <see langword="false" /> otherwise.
+            </value>
+      <remarks>
+        <para>This property controls preservation of all elements except images. To preserve also images, use the <see cref="P:GemBox.Pdf.Ocr.OcrReadOptions.KeepImage" /> property.</para>
+        <para>The default value is <see langword="false" />.</para>
+      </remarks>
+    </member>
+    <member name="M:GemBox.Pdf.Ocr.OcrReadOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GemBox.Pdf.Ocr.OcrReadOptions" /> class.
+            </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,34 @@
+{
+  "name": "Crimepad",
+  "version": "4.2.2",
+  "description": "Crime Pad 4",
+  "keywords": [
+    "Node.js",
+    "application"
+  ],
+  "author": {
+    "name": "Jeremy Balzer",
+    "email": "jeremy@onereach.com",
+    "url": "http://www.onereach.com/"
+  },
+  "homepage": "http://www.visionations.com/",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 20.19.0",
+    "npm": ">= 10.8.2"
+  },
+  "dependencies": {
+    "edge-js": "^23.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "node start.js"
+  },
+  "bundleDependencies": [],
+  "private": true,
+  "main": "start.js"
+}
