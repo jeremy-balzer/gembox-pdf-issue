@@ -7,6 +7,8 @@ const gemBoxPdfLicense = "FREE-LIMITED-KEY";
 const template = `
 // to join files
 #r "${path.normalize(__dirname + '/GemBox.Pdf.dll').split('\\').join('/')}"
+#r "${path.normalize(__dirname + '/System.Runtime.CompilerServices.Unsafe.dll').split('\\').join('/')}"
+#r "${path.normalize(__dirname + '/System.Memory.dll').split('\\').join('/')}"
 using System;
 using System.Runtime;
 using GemBox.Pdf;
@@ -56,8 +58,7 @@ const joinFiles = ()=>{
     try {
         var joinPDFs = edge.func(template);
     } catch(err){
-        ctx.log.error(err)
-        return reject(err);
+        console.error(err);
     }
     joinPDFs(output, (error, result) => {
         if (error) return console.error(error);
