@@ -26,7 +26,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "run": "node start.js"
+    "run": "node start.js",
+    "run-doc": "node start-doc.js"
   },
   "bundleDependencies": [],
   "private": true,
